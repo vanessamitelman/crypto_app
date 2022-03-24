@@ -9,7 +9,7 @@ const { Text } = Typography;
 const CryptoInfo = ({ coinId }) => {
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
   const cryptoDetails = data?.data?.coin;
-  console.log('cryptoDetails=', cryptoDetails);
+
   if (isFetching) {
     return <Loader/>;
   }
