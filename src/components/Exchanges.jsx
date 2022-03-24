@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Typography, Avatar, Collapse } from 'antd';
 import millify from 'millify';
 import { useGetExchangesQuery } from '../services/cryptoApi';
-import CryptoInfo from './CryptoInfo';
+import {Loader,CryptoInfo} from './';
 
 const { Title, Text } = Typography;
 const { Panel } = Collapse;
@@ -11,7 +11,7 @@ const Exchanges = () => {
   const { data: exchanges, isFetching } = useGetExchangesQuery();
 
   if (isFetching) {
-    return 'Loading....';
+    return <Loader/>;
   }
   return (
     <>

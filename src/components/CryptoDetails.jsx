@@ -18,7 +18,7 @@ import {
   useGetCryptoDetailsQuery,
   useGetCryptoHistoryQuery
 } from '../services/cryptoApi';
-import LineChart from './LineChart';
+import { Loader, LineChart } from './';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -104,7 +104,7 @@ const CryptoDetails = () => {
   ];
 
   if (isFetching) {
-    return 'Loading....';
+    return <Loader />;
   }
   return (
     <>

@@ -2,6 +2,7 @@ import React from 'react';
 import { useGetCryptoDetailsQuery } from '../services/cryptoApi';
 import { Row, Typography } from 'antd';
 import HTMLReactParser from 'html-react-parser';
+import { Loader } from './';
 
 const { Text } = Typography;
 
@@ -10,7 +11,7 @@ const CryptoInfo = ({ coinId }) => {
   const cryptoDetails = data?.data?.coin;
   console.log('cryptoDetails=', cryptoDetails);
   if (isFetching) {
-    return 'Loading....';
+    return <Loader/>;
   }
   return (
     <>
