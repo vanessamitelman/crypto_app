@@ -37,8 +37,6 @@ a:hover{
     padding: 20px;
 }
 .nav-container{
-    position: fixed;
-    left: 0;
     margin: 10px;
     height: 100vh;
     margin: 0px;
@@ -74,25 +72,6 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
-
-@media screen and (max-width:1300px){
-    .main{
-        margin-left: 50px;
-    }
-}
-
-@media screen and (max-width:1170px){
-    .main{
-        margin-left: 50px;
-    }
-}
-
-@media screen and (max-width:1000px){
-    .main{
-        margin-left: 100px;
-    }
-}
-
 @media screen and (max-width:800px){
     .app{
         flex-direction: column;
@@ -292,11 +271,12 @@ a:hover{
     width: 180px;
 }
 .news-card{
-    min-height: 300px ;
+    height: 100% ;
 }
 .news-image-container{
     display: flex ;
     justify-content: space-between ;
+    flex-wrap: wrap;
 }
 .news-title{
 width: 70%;
@@ -313,6 +293,7 @@ width: 70%;
 .provider-container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .provider-name{
     margin-left: 10px;
