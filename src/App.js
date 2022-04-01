@@ -33,7 +33,7 @@ const App = () => {
             level={5}
             style={{ color: 'white', textAlign: 'center' }}
           >
-            Cryptoverse
+            Cryptoverse. Created by Vanessa Mitelman
             <br />
             All rights reserved.
           </Typography.Title>
